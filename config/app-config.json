@@ -1,0 +1,20 @@
+{
+  "ads": {
+    "enabled": true,
+    "banner": true,
+    "interstitial": true,
+    "interstitial_every_n_plays": 5,
+    "interstitial_min_interval_seconds": 180
+  },
+  "popup": {
+    "enabled": false,
+    "id": "bun-venit-1",
+    "title": "Bine ai venit! 🌙",
+    "message": "Combină sunetele preferate și setează temporizatorul de somn din iconița cu luna.",
+    "button_text": "Am înțeles",
+    "link_url": "",
+    "link_text": "",
+    "show_once": true,
+    "delay_seconds": 3
+  }
+}
