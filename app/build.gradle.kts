@@ -18,7 +18,7 @@ val admobInterstitialId = "ca-app-pub-3940256099942544/1033173712"
 // Linkul către fișierul config/app-config.json (controlează popup-ul și reclamele
 // fără să republici aplicația). Exemplu pentru GitHub:
 // https://raw.githubusercontent.com/UTILIZATOR/CalmLoop/main/config/app-config.json
-val remoteConfigUrl = ""
+val remoteConfigUrl = "https://raw.githubusercontent.com/thegreatappbuilder/CalmLoop/main/config/app-config.json"
 
 // Linkul către politica de confidențialitate (obligatoriu în Play Store).
 val privacyPolicyUrl = ""
