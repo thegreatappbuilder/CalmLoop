@@ -5,6 +5,9 @@ on:
     branches: [main]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-24.04
@@ -48,6 +51,15 @@ jobs:
         with:
           name: CalmLoop-PlayStore-AAB
           path: app/build/outputs/bundle/release/*.aab
+
+      - name: Publică APK-ul ca Release (link public de descărcare)
+        if: github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cp app/build/outputs/apk/release/app-release.apk CalmLoop.apk
+          TAG="build-${{ github.run_number }}"
+          gh release create "$TAG" CalmLoop.apk --title "Calm Loop (build ${{ github.run_number }})" --notes "APK pentru instalare pe telefon." --latest
 
       - name: Șterge cheia
         if: always()
